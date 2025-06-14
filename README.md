@@ -1,6 +1,6 @@
 # 📘 Expense Tracker Automation using n8n + Google Sheets
 [https://mani-expense-app.netlify.app/]
-
+[https://docs.google.com/spreadsheets/d/1iIx_kv-mhqBlOeXrCebzC-f5tIaovxoJj4UhSlKMbn8/edit?gid=0#gid=0]
 Track your daily expenses using a beautiful web form and log them directly into Google Sheets — **no code**, **no paid APIs**, just smart automation with **n8n**.
 
 ---
