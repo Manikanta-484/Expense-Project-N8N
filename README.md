@@ -79,7 +79,7 @@ Paste this into an `.html` file (you’ll update the URL in Step 6):
 
 🔄 Submit the form while in test mode to pass sample data to the webhook.
 
-📊 Step 5: Add a Google Sheets Node
+### 📊 Step 5: Add a Google Sheets Node
 Click ➕ → search for Google Sheets
 
 Choose Action: Append Row
@@ -98,7 +98,7 @@ Category	{{$json["body"]["category"]}}
 Description	{{$json["body"]["description"]}}
 Amount	{{$json["body"]["amount"]}}
 ```
-🚀 Step 6: Switch to Production Webhook
+### 🚀 Step 6: Switch to Production Webhook
 Open the Webhook node
 
 Copy the Production URL (not the test one)
@@ -108,12 +108,12 @@ Update your HTML form to:
 <form action="https://YOUR-N8N-WORKSPACE.n8n.cloud/webhook/expense-form" method="POST">
 ```
   
-✅ Step 7: Activate the Workflow
+### ✅ Step 7: Activate the Workflow
 Click the green Activate button at the top-right of the workflow
 
 Your workflow is now live and listening forever 🎉
 
-✅ Result
+### ✅ Result
 Every time you fill the form:
 
 A new row is added to your Google Sheet
