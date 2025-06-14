@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker Form</title>
+  <style>
+    body {
+      background: #f0f4f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      color: #444;
+      font-weight: 500;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 0.8rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #43a047;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Expense Tracker</h2>
+    <form action="https://mani04.app.n8n.cloud/webhook/expense-form" method="POST">
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="category">Category</label>
+      <select id="category" name="category" required>
+        <option value="">-- Select Category --</option>
+        <option value="Food">🍔 Food</option>
+        <option value="Travel">✈️ Travel</option>
+        <option value="Shopping">🛍 Shopping</option>
+        <option value="Bills">💡 Bills</option>
+        <option value="Groceries">🛒 Groceries</option>
+        <option value="Entertainment">🎮 Entertainment</option>
+        <option value="Other">🔧 Other</option>
+      </select>
+
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="2" placeholder="Optional..."></textarea>
+
+      <label for="amount">Amount (₹)</label>
+      <input type="number" id="amount" name="amount" step="0.01" required />
+
+      <button type="submit">Submit Expense</button>
+    </form>
+  </div>
+</body>
+</html>
